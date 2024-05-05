@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package appempleadoovertime;
+package Empleado;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ import java.util.*;
  *
  * @author Jose
  */
-public class AppEmpleadoOvertime {
+public class Empleado {
 
     private Scanner teclado;
     private String nombre;
@@ -40,11 +40,25 @@ public class AppEmpleadoOvertime {
         System.out.println("Horas trabajadas: " + hrTrabajadas);
     }
 
+    public void horasExtras() {
+        if (hrTrabajadas >= 8) {
+            System.out.println(nombre + " trabajo horas extras.");
+        } else {
+            System.out.println(nombre + " no trabajo sus horas normales.");
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Empleado empleado1;
+        empleado1 = new Empleado();
+        empleado1.inicializar();
+        empleado1.imprimir();
+        empleado1.horasExtras();
+
     }
 
 }
